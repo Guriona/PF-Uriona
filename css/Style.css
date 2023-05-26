@@ -42,9 +42,18 @@ p {
     object-fit: cover;
 }
 
+.row>*{
+    padding: 0;
+}
+
+.card{
+    height: 600px;
+}
+
 .cards img{
     height: 50%;
     object-fit: cover;
+    margin: 0;
 }
 
 .card:hover img{
@@ -54,6 +63,7 @@ p {
 
 .btn-primary:hover{
     background-color: #151555;
+    font-size: 20px;
 }
 
 .info-card img{
