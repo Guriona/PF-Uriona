@@ -84,48 +84,10 @@ p {
 }
 
 .footer {
-    background-color: #D27685;
-    color: #030303;
-    padding: 10px;
+    color: #ffffff;
     font-size: 20px;
 }
 
-.footer h3 {
-    font-size: 30px;
-    text-decoration: underline;
-    padding: 10px;
-}
-
-.productos{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-template-rows: auto;
-    padding: 15px;
-    gap: 10px;
-    justify-items: center;
-}
-
-.productos__cards{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 80%;
-    height: 600px;
-    border: 2px solid #ffffff;
-    position: relative;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.productos__cards img{
-    width: 100%;
-    height: 60%;
-    object-fit: cover;
-}
-
-.productos__cards h3{
-    font-size: 24px;
-}
 
 .envios{
     display: flex;
@@ -147,11 +109,11 @@ p {
 .envios__content ul{
     text-align:justify;
     list-style-type: disc;
-    font-size: 40px;
+    font-size: 20px;
 }
 
 .envios__content ul li p{
-    font-size: 30px;
+    font-size: 20px;
 }
 
 .envios__maps{
@@ -203,24 +165,6 @@ p {
 .contact form {
     width: 40%;
     border: #ffffff solid 2px;
-}
-
-.form label {
-    display: block;
-}
-
-.form input {
-    height: 30px;
-    width: 98%;
-}
-
-.form-product {
-    display: inline;
-    font-size: 25px;
-}
-
-.form-product select {
-    font-size: 20px;
 }
 
 @media only screen and (max-width: 768px){
