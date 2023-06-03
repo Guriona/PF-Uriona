@@ -6,20 +6,8 @@
 }
 
 html {
-    font-size: 62, 5%;
+    font-size: 100%;
     font-family:'Times New Roman', Times, serif;
-}
-
-h1 {
-    text-align: center;
-    font-size: 50px;
-    padding: 20px;
-}
-
-h2 {
-    font-size: 40px;
-    padding: 30px 40px;
-    text-align: center;
 }
 
 p {
@@ -32,6 +20,11 @@ p {
     background-color: #66347F;
 }
 
+.navbar{
+    font-size: 24px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
 .carousel-inner{
     height: 400px;
 }
@@ -42,9 +35,9 @@ p {
     object-fit: cover;
 }
 
-.row>*{
+/* .row>*{
     padding: 0;
-}
+} */
 
 .card{
     height: 600px;
