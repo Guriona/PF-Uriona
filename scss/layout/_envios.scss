@@ -1,0 +1,44 @@
+.envios{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.envios__content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 50%;
+}
+
+.envios__content h2{
+    text-decoration:underline ;
+}
+
+.envios__content ul{
+    text-align:justify;
+    list-style-type: disc;
+    font-size: 20px;
+}
+
+.envios__content ul li p{
+    font-size: 20px;
+}
+
+.envios__maps{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 40%;
+}
+
+.envios__maps h2{
+    text-decoration:underline ;
+}
+
+.envios__maps iframe {
+    width: 70%;
+    height: 350px;
+    border-radius: 100%;
+    padding: 20px;
+}
