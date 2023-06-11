@@ -1,0 +1,12 @@
+.hero {
+    display: flex;
+    @include flex(row, center, center, wrap, 10px);
+
+    &__content {
+        width: 40%;
+    }
+
+    img {
+        @include images(40%, 450px, cover, 100%);
+    }
+}

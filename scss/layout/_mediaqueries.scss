@@ -6,8 +6,42 @@
         padding: 5px;
         }
 
+        .hero {
+            display: flex;
+            @include flex(column, center, center, wrap, 10px);
+        
+            &__content {
+                width: 80%;
+            }
+        
+            img {
+                @include images(80%, 275px, cover, 0);
+            }
+        }
 }
 
+.envios{
+    display: flex;
+    @include flex(column, space-between, center, wrap, 10px);
+    &__content{
+        width: 80%;
+        h2{
+            text-decoration:underline ;
+        }
+        ul li p{
+            font-size: 20px;
+        }
+    }
+    &__maps{
+        width: 80%;
+        h2{
+            text-decoration:underline ;
+        }
+        iframe {
+            @include images(90%, 200px, none, 10px);
+        }
+    }
+}
 @media only screen and (max-width: 576px){
     .info-card img{
         width: 100%;

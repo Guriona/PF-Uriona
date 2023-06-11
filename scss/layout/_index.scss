@@ -1,41 +1,38 @@
-
 .fondo {
-    color: #ffffff;
-    background-color: #66347F;
+    color: $light-color;
+    background-color: $main-color;
 }
 
-.carousel-inner{
-    height: 400px;
+.carousel-inner {
+    height: 500px;
+
+    img {
+        @include images(100%, 100%, cover, 0);
+    }
 }
 
-.carousel-item img{
-    width: 100%;
-    height: 400px;
-    object-fit: cover;
+.cards {
+        h2{
+            text-align: center;
+        }
+    &__container {
+        @include flex(row, center, center, wrap, 10px);
+        height: 400px;
+
+        img {
+            @include images(70%,50%,cover,5px);
+            margin: 0;
+        }
+    }
 }
 
-.card{
-    height: 600px;
-}
-
-.cards img{
-    height: 50%;
-    object-fit: cover;
-    margin: 0;
-}
-
-.card:hover img{
-    overflow: hidden;
-    height: 80%;
-}
-
-.btn-primary:hover{
+.btn-primary:hover {
     background-color: #151555;
     font-size: 20px;
 }
 
-.info-card img{
-    width: 40%;
+.info-card img {
+    width: 30%;
     height: 250px;
     object-fit: cover;
 }
@@ -50,4 +47,3 @@
     right: 15px;
     z-index: 1;
 }
-

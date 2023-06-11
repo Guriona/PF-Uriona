@@ -1,44 +1,22 @@
 .envios{
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-
-.envios__content{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 50%;
-}
-
-.envios__content h2{
-    text-decoration:underline ;
-}
-
-.envios__content ul{
-    text-align:justify;
-    list-style-type: disc;
-    font-size: 20px;
-}
-
-.envios__content ul li p{
-    font-size: 20px;
-}
-
-.envios__maps{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 40%;
-}
-
-.envios__maps h2{
-    text-decoration:underline ;
-}
-
-.envios__maps iframe {
-    width: 70%;
-    height: 350px;
-    border-radius: 100%;
-    padding: 20px;
+    @include flex(row, space-between, start, wrap, 10px);
+    &__content{
+        width: 50%;
+        h2{
+            text-decoration:underline ;
+        }
+        ul li p{
+            font-size: 20px;
+        }
+    }
+    &__maps{
+        width: 40%;
+        h2{
+            text-decoration:underline ;
+        }
+        iframe {
+            @include images(70%, 200px, none, 10px);
+        }
+    }
 }
