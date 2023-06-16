@@ -1,0 +1,46 @@
+
+.title {
+    padding-top: 100px;
+}
+
+.cards{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: 
+    'side product1 product2 product3'
+    'side product4 product5 product6'
+    'side product7 product8 product9';
+    gap: 20px;
+    &__side{
+        grid-area: side;
+    }
+}
+
+.p1{
+    grid-area: product1;
+}
+.p2{
+    grid-area: product2;
+}
+.p3{
+    grid-area: product3;
+}
+.p4{
+    grid-area: product4;
+}
+.p5{
+    grid-area: product5;
+}
+.p6{
+    grid-area: product6;
+}
+.p7{
+    grid-area: product7;
+}
+.p8{
+    grid-area: product8;
+}
+.p9{
+    grid-area: product9;
+}

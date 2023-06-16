@@ -24,13 +24,21 @@ h1 {
 }
 
 .footer {
-  color: #ffffff;
+  color: #222222;
   font-size: 20px;
 }
 
 .fondo {
-  color: #ffffff;
-  background-color: #66347F;
+  color: #222222;
+  background-color: #d8d7f7;
+}
+
+.navbar {
+  height: 50px;
+}
+
+.title {
+  padding-top: 50px;
 }
 
 .carousel-inner {
@@ -47,30 +55,47 @@ h1 {
   text-align: center;
 }
 .cards__container {
+  display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
+  align-items: start;
   flex-wrap: wrap;
-  gap: 10px;
-  height: 400px;
+  gap: 0px;
+  width: 250px;
+  height: 350px;
+  background-color: #80abed;
+  color: #131313;
+  border-radius: 25px;
 }
 .cards__container img {
-  width: 70%;
-  height: 50%;
+  width: 100%;
+  height: 70%;
   object-fit: cover;
-  border-radius: 5px;
-  margin: 0;
+  border-radius: 25px;
 }
 
-.btn-primary:hover {
-  background-color: #151555;
+.btn-primary {
+  background-color: #6768ab;
+  border: 0;
   font-size: 20px;
+  transition: 1s;
+}
+.btn-primary:hover {
+  background-color: #523f90;
+  font-size: 24px;
 }
 
+.info-card {
+  background-color: #80abed;
+  color: #131313;
+  border-radius: 25px;
+  height: 300px;
+}
 .info-card img {
   width: 30%;
-  height: 250px;
+  height: 100%;
   object-fit: cover;
+  border-radius: 10px;
 }
 
 .insta {
@@ -92,19 +117,19 @@ h1 {
 
 .contact form {
   width: 40%;
-  border: #ffffff solid 2px;
+  border: #222222 solid 2px;
 }
 
 .envios {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  align-items: start;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
   gap: 10px;
 }
 .envios__content {
-  width: 50%;
+  width: 40%;
 }
 .envios__content h2 {
   text-decoration: underline;
@@ -119,13 +144,65 @@ h1 {
   text-decoration: underline;
 }
 .envios__maps iframe {
-  width: 70%;
+  width: 60%;
   height: 200px;
   object-fit: none;
   border-radius: 10px;
 }
 
+.title {
+  padding-top: 100px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas: "side product1 product2 product3" "side product4 product5 product6" "side product7 product8 product9";
+  gap: 20px;
+}
+.cards__side {
+  grid-area: side;
+}
+
+.p1 {
+  grid-area: product1;
+}
+
+.p2 {
+  grid-area: product2;
+}
+
+.p3 {
+  grid-area: product3;
+}
+
+.p4 {
+  grid-area: product4;
+}
+
+.p5 {
+  grid-area: product5;
+}
+
+.p6 {
+  grid-area: product6;
+}
+
+.p7 {
+  grid-area: product7;
+}
+
+.p8 {
+  grid-area: product8;
+}
+
+.p9 {
+  grid-area: product9;
+}
+
 .hero {
+  display: flex;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -144,12 +221,8 @@ h1 {
 }
 
 @media only screen and (max-width: 768px) {
-  .info-card img {
-    width: 100%;
-    height: 500px;
-    padding: 5px;
-  }
   .hero {
+    display: flex;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -166,42 +239,48 @@ h1 {
     object-fit: cover;
     border-radius: 0;
   }
+  .envios {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .envios__content {
+    width: 80%;
+  }
+  .envios__content h2 {
+    text-decoration: underline;
+  }
+  .envios__content ul li p {
+    font-size: 20px;
+  }
+  .envios__maps {
+    width: 80%;
+  }
+  .envios__maps h2 {
+    text-decoration: underline;
+  }
+  .envios__maps iframe {
+    width: 90%;
+    height: 200px;
+    object-fit: none;
+    border-radius: 10px;
+  }
 }
-.envios {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-.envios__content {
-  width: 80%;
-}
-.envios__content h2 {
-  text-decoration: underline;
-}
-.envios__content ul li p {
-  font-size: 20px;
-}
-.envios__maps {
-  width: 80%;
-}
-.envios__maps h2 {
-  text-decoration: underline;
-}
-.envios__maps iframe {
-  width: 90%;
-  height: 200px;
-  object-fit: none;
-  border-radius: 10px;
-}
-
 @media only screen and (max-width: 576px) {
+  .info-card {
+    background-color: #80abed;
+    color: #131313;
+    border-radius: 25px;
+    height: 640px;
+  }
   .info-card img {
     width: 100%;
-    height: 450px;
-    padding: 5px;
+    height: 50%;
+    object-fit: cover;
+    border-radius: 10px;
   }
 }
 

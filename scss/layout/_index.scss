@@ -3,6 +3,14 @@
     background-color: $main-color;
 }
 
+.navbar {
+    height: 50px;
+}
+
+.title {
+    padding-top: 50px;
+}
+
 .carousel-inner {
     height: 500px;
 
@@ -12,29 +20,45 @@
 }
 
 .cards {
-        h2{
-            text-align: center;
-        }
+    h2 {
+        text-align: center;
+    }
+
     &__container {
-        @include flex(row, center, center, wrap, 10px);
-        height: 400px;
+        @include flex(row, center, start, wrap, 0px);
+        width: 250px;
+        height: 350px;
+        background-color: $product-color;
+        color: $product-color-text;
+        border-radius: 25px;
 
         img {
-            @include images(70%,50%,cover,5px);
-            margin: 0;
+            @include images(100%, 70%, cover, 25px);
         }
     }
 }
 
-.btn-primary:hover {
-    background-color: #151555;
+.btn-primary {
+    background-color: #6768ab;
+    border: 0;
     font-size: 20px;
+    transition: 1s;
+
+    &:hover {
+        background-color: #523f90;
+        font-size: 24px;
+    }
 }
 
-.info-card img {
-    width: 30%;
-    height: 250px;
-    object-fit: cover;
+.info-card {
+    background-color: $product-color;
+    color: $product-color-text;
+    border-radius: 25px;
+    height: 300px;
+
+    img {
+        @include images(30%, 100%, cover, 10px);
+    }
 }
 
 .insta {

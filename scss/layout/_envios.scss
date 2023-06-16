@@ -1,8 +1,7 @@
 .envios{
-    display: flex;
-    @include flex(row, space-between, start, wrap, 10px);
+    @include flex(row, center, center, wrap, 10px);
     &__content{
-        width: 50%;
+        width: 40%;
         h2{
             text-decoration:underline ;
         }
@@ -16,7 +15,7 @@
             text-decoration:underline ;
         }
         iframe {
-            @include images(70%, 200px, none, 10px);
+            @include images(60%, 200px, none, 10px);
         }
     }
 }
