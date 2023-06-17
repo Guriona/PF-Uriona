@@ -63,7 +63,7 @@ h1 {
   gap: 0px;
   width: 250px;
   height: 350px;
-  background-color: #80abed;
+  background-color: rgba(128, 172, 237, 0.6117647059);
   color: #131313;
   border-radius: 25px;
 }
@@ -86,7 +86,7 @@ h1 {
 }
 
 .info-card {
-  background-color: #80abed;
+  background-color: rgba(128, 172, 237, 0.6117647059);
   color: #131313;
   border-radius: 25px;
   height: 300px;
@@ -110,14 +110,46 @@ h1 {
 }
 
 .contact {
-  width: 100%;
-  padding: 10px 30px;
-  font-size: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: 0;
+  align-items: 0;
+  flex-wrap: wrap;
+  gap: 0;
+  gap: 30px;
 }
-
-.contact form {
-  width: 40%;
-  border: #222222 solid 2px;
+.contact__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: 0;
+  align-items: 0;
+  flex-wrap: wrap;
+  gap: 0;
+  width: 50%;
+}
+.contact__body__form {
+  width: 100%;
+  padding: 5px 0;
+}
+.contact__body__form input {
+  background-color: rgba(103, 104, 171, 0.6352941176);
+}
+.contact__body__form textarea {
+  background-color: rgba(103, 104, 171, 0.6352941176);
+}
+.contact__body__form button {
+  background-color: rgba(103, 104, 171, 0.6352941176);
+}
+.contact__info {
+  width: 45%;
+}
+.contact__info__icons ul li {
+  display: flex;
+  flex-direction: row;
+  justify-content: 0;
+  align-items: 0;
+  flex-wrap: nowwrap;
+  gap: 5px;
 }
 
 .envios {
@@ -154,15 +186,43 @@ h1 {
   padding-top: 100px;
 }
 
-.cards {
+.prodcards {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: auto;
   grid-template-areas: "side product1 product2 product3" "side product4 product5 product6" "side product7 product8 product9";
   gap: 20px;
+  padding: 10px;
 }
-.cards__side {
+.prodcards__side {
   grid-area: side;
+}
+.prodcards__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: 0;
+  flex-wrap: wrap;
+  gap: 5px;
+  width: 250px;
+  height: 350px;
+  background-color: rgba(128, 172, 237, 0.6117647059);
+  color: #131313;
+  border-radius: 25px;
+}
+.prodcards__container__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: 0;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+.prodcards__container img {
+  width: 100%;
+  height: 70%;
+  object-fit: cover;
+  border-radius: 25px;
 }
 
 .p1 {
@@ -221,6 +281,26 @@ h1 {
 }
 
 @media only screen and (max-width: 768px) {
+  .prodcards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: "side side side" "product1 product2 product3" "product4 product5 product6" "product7 product8 product9";
+    gap: 20px;
+  }
+  .prodcards__container {
+    width: 200px;
+    height: 300px;
+    background-color: rgba(128, 172, 237, 0.6117647059);
+    color: #131313;
+    border-radius: 25px;
+  }
+  .prodcards__container img {
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+    border-radius: 25px;
+  }
   .hero {
     display: flex;
     display: flex;
@@ -271,7 +351,7 @@ h1 {
 }
 @media only screen and (max-width: 576px) {
   .info-card {
-    background-color: #80abed;
+    background-color: rgba(128, 172, 237, 0.6117647059);
     color: #131313;
     border-radius: 25px;
     height: 640px;
@@ -281,6 +361,60 @@ h1 {
     height: 50%;
     object-fit: cover;
     border-radius: 10px;
+  }
+  .prodcards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: "side side" "product1 product2" "product3 product4" "product5 product6" "product7 product8";
+    gap: 20px;
+  }
+  .prodcards__container {
+    width: 200px;
+    height: 300px;
+    background-color: rgba(128, 172, 237, 0.6117647059);
+    color: #131313;
+    border-radius: 25px;
+  }
+  .prodcards__container img {
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+    border-radius: 25px;
+  }
+  .contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: 0;
+    align-items: 0;
+    flex-wrap: wrap;
+    gap: 0;
+    gap: 30px;
+  }
+  .contact__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: 0;
+    align-items: 0;
+    flex-wrap: wrap;
+    gap: 0;
+    width: 100%;
+  }
+  .contact__body__form {
+    width: 100%;
+    padding: 5px 0;
+  }
+  .contact__body__form input {
+    background-color: rgba(103, 104, 171, 0.6352941176);
+  }
+  .contact__body__form textarea {
+    background-color: rgba(103, 104, 171, 0.6352941176);
+  }
+  .contact__body__form button {
+    background-color: rgba(103, 104, 171, 0.6352941176);
+  }
+  .contact__info {
+    width: 45%;
   }
 }
 

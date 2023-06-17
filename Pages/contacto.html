@@ -57,26 +57,53 @@
         <div class="text-center my-2 p-2">
             <h1>Contacto:</h1>
         </div>
-        <section class="d-flex align-items-center flex-column ">
-            <div class="my-2">
-                <h3>Dejenos cualquier consulta que tenga:</h3>
-            </div>
-            <div class="row gap-3 p-2 w-75">
-                <div class="col">
+        <section class="contact">
+            <div class="contact__body gap-3 p-2 ">
+                <h2 class="text-start">Cualquier consulta que tengas:</h2>
+                <div class="contact__body__form">
                     <input type="text" class="form-control" placeholder="Nombre" aria-label="Nombre">
                 </div>
-                <div class="col w-75">
+                <div class="contact__body__form">
                     <input type="text" class="form-control" placeholder="Apellido" aria-label="Apellido">
                 </div>
+                <div class="contact__body__form mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Email:</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1"
+                        placeholder="ejemplo@ejemplo.com">
+                </div>
+                <div class="contact__body__form mb-3 ">
+                    <label for="exampleFormControlTextarea1" class="form-label">Comentario:</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+                <div class="contact__body__form">
+                    <button type="button" class="btn">Enviar</button>
+                </div>
             </div>
-            <div class="mb-3 w-75">
-                <label for="exampleFormControlInput1" class="form-label">Email:</label>
-                <input type="email" class="form-control" id="exampleFormControlInput1"
-                    placeholder="ejemplo@ejemplo.com">
-            </div>
-            <div class="mb-3 w-75">
-                <label for="exampleFormControlTextarea1" class="form-label">Comentario:</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            <div class="contact__info gap-3 p-2">
+                <h2>¡Contactanos!</h2>
+                <div class="contact__info__icons">
+                    <ul>
+                        <li>
+                            <i class="bi bi-whatsapp"></i>
+                            <p>+11 1111111111</p>
+                        </li>
+                        <li>
+                            <i class="bi bi-facebook"></i>
+                            <p>EntreAlambres</p>
+                        </li>
+                        <li>
+                            <i class="bi bi-instagram"></i>
+                            <p>entre.alambres</p>
+                        </li>
+                        <li>
+                            <i class="bi bi-envelope-fill"></i>
+                            <p>info@entrealambres.com</p>
+                        </li>
+                        <li>
+                            <i class="bi bi-geo-alt-fill"></i>
+                            <p>Insertar ubicación</p>
+                        </li>
+                </div>
             </div>
         </section>
         <a href="">
