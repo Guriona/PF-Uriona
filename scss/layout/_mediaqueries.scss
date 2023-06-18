@@ -1,5 +1,9 @@
 @media only screen and (max-width: 768px) {
 
+    .carousel-inner {
+        height: 400px;
+    }
+
     .prodcards {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -39,29 +43,48 @@
     }
 
     .envios {
-        @include flex(column, space-between, center, wrap, 10px);
-
         &__content {
-            width: 80%;
+            @include flex(column, space-between, center, wrap, 10px);
+            width: 100%;
 
-            h2 {
-                text-decoration: underline;
+            &__list {
+                width: 100%;
+
+                h2 {
+                    text-decoration: underline;
+                }
+
+                ul li p {
+                    font-size: 16px;
+                }
             }
 
-            ul li p {
-                font-size: 20px;
+            img {
+                @include images(100%, 450px, cover, 100%);
             }
         }
+    }
+
+    .envios2 {
+        @include flex(row, start, start, wrap, 10px);
+        padding-top: 30px;
+        gap: 70px;
 
         &__maps {
-            width: 80%;
+            width: 40%;
 
             h2 {
                 text-decoration: underline;
             }
 
             iframe {
-                @include images(90%, 200px, none, 10px);
+                @include images(60%, 200px, none, 10px);
+            }
+        }
+
+        &__pay {
+            h2 {
+                text-decoration: underline;
             }
         }
     }
@@ -70,6 +93,11 @@
 
 
 @media only screen and (max-width: 576px) {
+
+    .carousel-inner {
+        height: 300px;
+    }
+
     .info-card {
         background-color: $product-color;
         color: $product-color-text;
@@ -109,31 +137,78 @@
     .contact {
         @include flex(row, 0, 0, wrap, 0);
         gap: 30px;
-    
+
         &__body {
             @include flex(column, 0, 0, wrap, 0);
             width: 100%;
-    
+
             &__form {
                 width: 100%;
                 padding: 5px 0;
-    
+
                 input {
                     background-color: #6768aba2;
                 }
-    
+
                 textarea {
                     background-color: #6768aba2;
                 }
-    
+
                 button {
                     background-color: #6768aba2;
                 }
             }
         }
-    
-        &__info{
+
+        &__info {
             width: 45%;
+        }
+    }
+
+    .envios {
+        &__content {
+            @include flex(column, space-between, center, wrap, 10px);
+            width: 100%;
+
+            &__list {
+                width: 100%;
+
+                h2 {
+                    text-decoration: underline;
+                }
+
+                ul li p {
+                    font-size: 16px;
+                }
+            }
+
+            img {
+                @include images(100%, 450px, cover, 100%);
+            }
+        }
+    }
+
+    .envios2 {
+        @include flex(column, start, start, wrap, 10px);
+        padding-top: 30px;
+        gap: 70px;
+
+        &__maps {
+            width: 100%;
+
+            h2 {
+                text-decoration: underline;
+            }
+
+            iframe {
+                @include images(100%, 200px, none, 10px);
+            }
+        }
+
+        &__pay {
+            h2 {
+                text-decoration: underline;
+            }
         }
     }
 }

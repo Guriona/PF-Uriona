@@ -1,21 +1,45 @@
-.envios{
-    @include flex(row, center, center, wrap, 10px);
-    &__content{
-        width: 40%;
-        h2{
-            text-decoration:underline ;
+.envios {
+    &__content {
+        @include flex(row, space-between, center, wrap, 10px);
+        width: 100%;
+
+        &__list {
+            width: 45%;
+
+            h2 {
+                text-decoration: underline;
+            }
+
+            ul li p {
+                font-size: 16px;
+            }
         }
-        ul li p{
-            font-size: 20px;
+
+        img {
+            @include images(40%, 450px, cover, 100%);
         }
     }
-    &__maps{
+}
+
+.envios2 {
+    @include flex(row,start, start, wrap, 10px);
+    padding-top: 30px;
+    gap: 70px;
+    &__maps {
         width: 40%;
-        h2{
-            text-decoration:underline ;
+
+        h2 {
+            text-decoration: underline;
         }
+
         iframe {
             @include images(60%, 200px, none, 10px);
+        }
+    }
+
+    &__pay{
+        h2 {
+            text-decoration: underline;
         }
     }
 }
