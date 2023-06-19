@@ -19,8 +19,16 @@ h1 {
 }
 
 .navbar {
-  font-size: 24px;
+  font-size: 28px;
   font-family: "Times New Roman", Times, serif;
+}
+
+.nav img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 100%;
+  padding: 0, 5px;
 }
 
 .footer {
@@ -31,10 +39,6 @@ h1 {
 .fondo {
   color: #222222;
   background-color: #d8d7f7;
-}
-
-.navbar {
-  height: 50px;
 }
 
 .title {
@@ -63,7 +67,7 @@ h1 {
   gap: 0px;
   width: 250px;
   height: 350px;
-  background-color: rgba(128, 172, 237, 0.6117647059);
+  background-color: rgba(103, 104, 171, 0.4039215686);
   color: #131313;
   border-radius: 25px;
 }
@@ -86,7 +90,7 @@ h1 {
 }
 
 .info-card {
-  background-color: rgba(128, 172, 237, 0.6117647059);
+  background-color: rgba(103, 104, 171, 0.4039215686);
   color: #131313;
   border-radius: 25px;
   height: 300px;
@@ -162,12 +166,13 @@ h1 {
   background-color: rgba(103, 104, 171, 0.6352941176);
 }
 .contact__info {
+  text-align: start;
   width: 45%;
 }
 .contact__info__icons ul li {
   display: flex;
   flex-direction: row;
-  justify-content: 0;
+  justify-content: start;
   align-items: 0;
   flex-wrap: nowwrap;
   gap: 5px;
@@ -233,11 +238,18 @@ h1 {
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: auto;
   grid-template-areas: "side product1 product2 product3" "side product4 product5 product6" "side product7 product8 product9";
-  gap: 20px;
+  gap: 40px;
   padding: 10px;
+  margin: 20px;
 }
 .prodcards__side {
   grid-area: side;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: 0;
+  flex-wrap: wrap;
+  gap: 5px;
 }
 .prodcards__container {
   display: flex;
@@ -246,9 +258,9 @@ h1 {
   align-items: 0;
   flex-wrap: wrap;
   gap: 5px;
-  width: 250px;
+  /* width: 250px; */
   height: 350px;
-  background-color: rgba(128, 172, 237, 0.6117647059);
+  background-color: rgba(103, 104, 171, 0.4039215686);
   color: #131313;
   border-radius: 25px;
 }
@@ -321,29 +333,58 @@ h1 {
   border-radius: 100%;
 }
 
-@media only screen and (max-width: 768px) {
-  .carousel-inner {
-    height: 400px;
-  }
+@media only screen and (max-width: 992px) {
   .prodcards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
     grid-template-areas: "side side side" "product1 product2 product3" "product4 product5 product6" "product7 product8 product9";
     gap: 20px;
+    padding: 10px;
+  }
+  .prodcards__side {
+    grid-area: side;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: 0;
+    flex-wrap: wrap;
+    gap: 5px;
   }
   .prodcards__container {
-    width: 200px;
-    height: 300px;
-    background-color: rgba(128, 172, 237, 0.6117647059);
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: 0;
+    flex-wrap: wrap;
+    gap: 5px;
+    /* width: 250px; */
+    height: 350px;
+    background-color: rgba(103, 104, 171, 0.4039215686);
     color: #131313;
     border-radius: 25px;
+  }
+  .prodcards__container__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: 0;
+    flex-wrap: wrap;
+    gap: 5px;
   }
   .prodcards__container img {
     width: 100%;
     height: 70%;
     object-fit: cover;
     border-radius: 25px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .carousel-inner {
+    height: 400px;
+  }
+  .prodcards {
+    gap: 20px;
   }
   .hero {
     display: flex;
@@ -418,7 +459,7 @@ h1 {
     height: 300px;
   }
   .info-card {
-    background-color: rgba(128, 172, 237, 0.6117647059);
+    background-color: rgba(103, 104, 171, 0.4039215686);
     color: #131313;
     border-radius: 25px;
     height: 640px;
@@ -433,21 +474,9 @@ h1 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
-    grid-template-areas: "side side" "product1 product2" "product3 product4" "product5 product6" "product7 product8";
+    grid-template-areas: "side side " "product1 product2 " "product3 product4 " "product5 product6 " "product7 product8 " "product9 none";
     gap: 20px;
-  }
-  .prodcards__container {
-    width: 200px;
-    height: 300px;
-    background-color: rgba(128, 172, 237, 0.6117647059);
-    color: #131313;
-    border-radius: 25px;
-  }
-  .prodcards__container img {
-    width: 100%;
-    height: 70%;
-    object-fit: cover;
-    border-radius: 25px;
+    padding: 10px;
   }
   .contact {
     display: flex;

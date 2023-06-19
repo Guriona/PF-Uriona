@@ -1,3 +1,42 @@
+@media only screen and (max-width: 992px) {
+
+    .prodcards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+        grid-template-areas:
+        'side side side'
+        'product1 product2 product3'
+        'product4 product5 product6'
+        'product7 product8 product9';
+        gap: 20px;
+        padding: 10px;
+    
+        &__side {
+            grid-area: side;
+            @include flex(column, start, 0, wrap, 5px);
+        }
+    
+        &__container {
+            @include flex(column, start, 0, wrap, 5px);
+            /* width: 250px; */
+            height: 350px;
+            background-color: $product-color;
+            color: $product-color-text;
+            border-radius: 25px;
+            
+            &__body{
+                @include flex(column, center, 0, wrap, 5px);
+            }
+    
+            img {
+                
+                @include images(100%, 70%, cover, 25px);
+            }
+        }
+    }
+}
+
 @media only screen and (max-width: 768px) {
 
     .carousel-inner {
@@ -5,29 +44,8 @@
     }
 
     .prodcards {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: auto;
-        grid-template-areas:
-            'side side side'
-            'product1 product2 product3'
-            'product4 product5 product6'
-            'product7 product8 product9';
         gap: 20px;
-
-        &__container {
-            width: 200px;
-            height: 300px;
-            background-color: $product-color;
-            color: $product-color-text;
-            border-radius: 25px;
-
-            img {
-                @include images(100%, 70%, cover, 25px);
-            }
-        }
     }
-
 
     .hero {
         display: flex;
@@ -114,25 +132,17 @@
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: auto;
         grid-template-areas:
-            'side side'
-            'product1 product2'
-            'product3 product4'
-            'product5 product6'
-            'product7 product8';
+        'side side '
+        'product1 product2 '
+        'product3 product4 '
+        'product5 product6 '
+        'product7 product8 '
+        'product9 none';
         gap: 20px;
-
-        &__container {
-            width: 200px;
-            height: 300px;
-            background-color: $product-color;
-            color: $product-color-text;
-            border-radius: 25px;
-
-            img {
-                @include images(100%, 70%, cover, 25px);
-            }
-        }
+        padding: 10px;
     }
+
+
 
     .contact {
         @include flex(row, 0, 0, wrap, 0);

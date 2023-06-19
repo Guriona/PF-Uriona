@@ -25,12 +25,13 @@
     }
 
     &__info {
+        text-align: start;
         width: 45%;
         
         &__icons {
             ul {
                 li {
-                    @include flex(row, 0, 0, nowwrap, 5px);
+                    @include flex(row,start, 0, nowwrap, 5px);
                 }
             }
         }
