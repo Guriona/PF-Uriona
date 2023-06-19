@@ -6,7 +6,7 @@
 .nav {
     padding: 4px;
     img {
-        @include images(40px, 40px, cover, 100%);
+        @include images(50px, 50px, cover, 100%);
         padding: 0, 5px;
     }
 }

@@ -4,7 +4,7 @@
 }
 
 .title {
-    padding-top: 50px;
+    padding-top: 65px;
 }
 
 .carousel-inner {
@@ -27,6 +27,7 @@
         background-color: $product-color;
         color: $product-color-text;
         border-radius: 25px;
+        box-shadow: 2px 2px 2px 1px #191919;
 
         img {
             @include images(100%, 70%, cover, 25px);
@@ -39,6 +40,7 @@
     border: 0;
     font-size: 20px;
     transition: 1s;
+    box-shadow: 2px 2px 2px 1px #191919;
 
     &:hover {
         background-color: #523f90;
@@ -50,10 +52,21 @@
     background-color: $product-color;
     color: $product-color-text;
     border-radius: 25px;
-    height: 300px;
 
     img {
         @include images(30%, 100%, cover, 10px);
+        padding-bottom: 20px;
+    }
+
+    &-body{
+        font-weight: bold;
+        font-size: 16px;
+        p{
+        height: 100%;
+        }
+        ul{
+            list-style-type: none;
+        }
     }
 }
 

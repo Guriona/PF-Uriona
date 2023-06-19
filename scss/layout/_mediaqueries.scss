@@ -35,6 +35,20 @@
             }
         }
     }
+    
+    .hero {
+        @include flex(row, center, center, wrap, 10px);
+    
+        &__content {
+            width: 40%;
+        }
+    
+        img {
+            @include images(40%, 100%, cover, 100%);
+        }
+    }
+    
+
 }
 
 @media only screen and (max-width: 768px) {
@@ -43,12 +57,22 @@
         height: 400px;
     }
 
+    .info-card {
+        background-color: $product-color;
+        color: $product-color-text;
+        border-radius: 25px;
+        gap: 30px;
+
+        img {
+            @include images(80%, 50%, cover, 10px);
+        }
+    }
+
     .prodcards {
         gap: 20px;
     }
 
     .hero {
-        display: flex;
         @include flex(column, center, center, wrap, 10px);
 
         &__content {
@@ -56,7 +80,7 @@
         }
 
         img {
-            @include images(80%, 275px, cover, 0);
+            @include images(80%, 100%, cover, 100%);
         }
     }
 
@@ -120,7 +144,6 @@
         background-color: $product-color;
         color: $product-color-text;
         border-radius: 25px;
-        height: 640px;
 
         img {
             @include images(100%, 50%, cover, 10px);
