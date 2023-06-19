@@ -1,4 +1,15 @@
 .footer {
+    @include flex(row, space-between, start, wrap, 20px);
     color: $light-color;
     font-size: 20px;
+    margin:20px 25px 0 25px;
+
+    &__icons {
+        ul {
+            padding: 0;
+            li {
+                @include flex(row, start, start, nowwrap, 5px);
+            }
+        }
+    }
 }
