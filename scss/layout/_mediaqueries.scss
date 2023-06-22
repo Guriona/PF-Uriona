@@ -61,7 +61,6 @@
         background-color: $product-color;
         color: $product-color-text;
         border-radius: 25px;
-        gap: 30px;
 
         img {
             @include images(80%, 50%, cover, 10px);
