@@ -1,6 +1,7 @@
 .navbar {
     font-size: 28px;
     font-family: $main-font;
+    background-image: linear-gradient(#6768ab, $main-color);
 }
 
 .nav {
@@ -10,3 +11,10 @@
         padding: 0, 5px;
     }
 }
+
+.nav-bg{ 
+    background-color: $main-color;
+    color: $product-color-text;
+   
+}
+

@@ -22,6 +22,7 @@ h1 {
 .navbar {
   font-size: 28px;
   font-family: "Roboto Slab", serif;
+  background-image: linear-gradient(#6768ab, #d8d7f7);
 }
 
 .nav {
@@ -33,6 +34,11 @@ h1 {
   object-fit: cover;
   border-radius: 100%;
   padding: 0, 5px;
+}
+
+.nav-bg {
+  background-color: #d8d7f7;
+  color: #131313;
 }
 
 .footer {
@@ -61,10 +67,6 @@ h1 {
 .fondo {
   color: #222222;
   background-color: #d8d7f7;
-}
-
-.title {
-  padding-top: 65px;
 }
 
 .carousel-inner {
@@ -386,6 +388,9 @@ h1 {
 }
 .hero__content {
   width: 40%;
+}
+.hero__content p {
+  font-size: 20px;
 }
 .hero img {
   width: 40%;
