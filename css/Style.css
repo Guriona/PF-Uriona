@@ -546,6 +546,41 @@ h1 {
   .envios2__pay h2 {
     text-decoration: underline;
   }
+  .contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: 0;
+    align-items: 0;
+    flex-wrap: wrap;
+    gap: 0;
+    gap: 30px;
+  }
+  .contact__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0;
+    width: 100%;
+  }
+  .contact__body__form {
+    text-align: center;
+    width: 100%;
+    padding: 5px 0;
+  }
+  .contact__body__form input {
+    background-color: rgba(103, 104, 171, 0.6352941176);
+  }
+  .contact__body__form textarea {
+    background-color: rgba(103, 104, 171, 0.6352941176);
+  }
+  .contact__body__form button {
+    background-color: rgba(103, 104, 171, 0.6352941176);
+  }
+  .contact__info {
+    width: 100%;
+  }
 }
 @media only screen and (max-width: 576px) {
   .carousel-inner {
@@ -569,40 +604,6 @@ h1 {
     grid-template-areas: "side side " "product1 product2 " "product3 product4 " "product5 product6 " "product7 product8 " "product9 none";
     gap: 20px;
     padding: 10px;
-  }
-  .contact {
-    display: flex;
-    flex-direction: row;
-    justify-content: 0;
-    align-items: 0;
-    flex-wrap: wrap;
-    gap: 0;
-    gap: 30px;
-  }
-  .contact__body {
-    display: flex;
-    flex-direction: column;
-    justify-content: 0;
-    align-items: 0;
-    flex-wrap: wrap;
-    gap: 0;
-    width: 100%;
-  }
-  .contact__body__form {
-    width: 100%;
-    padding: 5px 0;
-  }
-  .contact__body__form input {
-    background-color: rgba(103, 104, 171, 0.6352941176);
-  }
-  .contact__body__form textarea {
-    background-color: rgba(103, 104, 171, 0.6352941176);
-  }
-  .contact__body__form button {
-    background-color: rgba(103, 104, 171, 0.6352941176);
-  }
-  .contact__info {
-    width: 45%;
   }
   .envios__content {
     display: flex;
