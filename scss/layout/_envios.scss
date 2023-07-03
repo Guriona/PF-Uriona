@@ -16,7 +16,7 @@
         }
 
         img {
-            @include images(40%, 450px, cover, 100%);
+            @include images(40%, 100%, cover, 100%);
         }
     }
 }

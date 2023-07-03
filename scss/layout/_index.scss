@@ -73,7 +73,6 @@
 
     img {
         @include images(30%, 100%, cover, 10px);
-        padding-bottom: 20px;
     }
 
     &-body {

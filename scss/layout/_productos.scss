@@ -8,30 +8,39 @@
         'side product4 product5 product6'
         'side product7 product8 product9';
     gap: 40px;
-    padding: 10px;
     margin: 20px;
 
     &__side {
         grid-area: side;
-        @include flex(column, start, 0, wrap, 5px);
+        @include flex(column, start, start, wrap, 5px);
     }
 
     &__container {
-        @include flex(column, start, 0, wrap, 5px);
-        /* width: 250px; */
-        height: 350px;
+        @include flex(column, start, center, wrap, 0);
         background-color: $product-color;
         color: $product-color-text;
         border-radius: 25px;
         box-shadow: 2px 2px 2px 1px #191919;
         
         &__body{
-            @include flex(column, center, 0, wrap, 5px);
+            @include flex(column, center, center, nowrap, 5px);
+            height: 30%;
+
+            h3{
+                font-size: 24px;
+                margin: 0;
+                text-align: center;
+            }
+            p{
+                font-size: 20px;
+                font-style: italic;
+                margin: 0;
+            }
         }
 
         img {
-            
-            @include images(100%, 70%, cover, 25px);
+            @include images(100%, 65%, cover, 25px);
+            padding-bottom: 5px;
         }
     }
 }
@@ -70,4 +79,18 @@
 
 .p9 {
     grid-area: product9;
+}
+
+.btn-primary {
+    width: 130px;
+    background-color: #6768ab;
+    border: 0;
+    font-size: 20px;
+    transition: 1s;
+    box-shadow: 2px 2px 2px 1px #191919;
+
+    &:hover {
+        background-color: #523f90;
+        font-size: 24px;
+    }
 }

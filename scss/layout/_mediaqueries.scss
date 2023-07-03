@@ -5,49 +5,54 @@
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: auto;
         grid-template-areas:
-        'side side side'
-        'product1 product2 product3'
-        'product4 product5 product6'
-        'product7 product8 product9';
+            'side side side'
+            'product1 product2 product3'
+            'product4 product5 product6'
+            'product7 product8 product9';
         gap: 20px;
         padding: 10px;
-    
+
         &__side {
             grid-area: side;
-            @include flex(column, start, 0, wrap, 5px);
+            @include flex(column, start, start, wrap, 10px);
         }
-    
-        &__container {
-            @include flex(column, start, 0, wrap, 5px);
-            /* width: 250px; */
-            height: 350px;
-            background-color: $product-color;
-            color: $product-color-text;
-            border-radius: 25px;
-            
-            &__body{
-                @include flex(column, center, 0, wrap, 5px);
+    }
+
+    .envios {
+        &__content {
+            @include flex(column, space-between, start, wrap, 10px);
+            width: 100%;
+
+            &__list {
+                width: 100%;
+
+                h2 {
+                    text-decoration: underline;
+                }
+
+                ul li p {
+                    font-size: 16px;
+                }
             }
-    
+
             img {
-                
-                @include images(100%, 70%, cover, 25px);
+                @include images(100%, 100%, cover, 100%);
             }
         }
     }
-    
+
     .hero {
         @include flex(row, center, center, wrap, 10px);
-    
+
         &__content {
             width: 40%;
         }
-    
+
         img {
             @include images(40%, 100%, cover, 100%);
         }
     }
-    
+
 
 }
 
@@ -68,7 +73,14 @@
     }
 
     .prodcards {
-        gap: 20px;
+        &__container {
+            img {
+                height: 55%;
+            }
+            &__body{
+                height: 42%;
+            }
+        }
     }
 
     .hero {
@@ -101,7 +113,7 @@
             }
 
             img {
-                @include images(100%, 450px, cover, 100%);
+                @include images(100%, 100%, cover, 100%);
             }
         }
     }
@@ -186,14 +198,41 @@
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: auto;
         grid-template-areas:
-        'side side '
-        'product1 product2 '
-        'product3 product4 '
-        'product5 product6 '
-        'product7 product8 '
-        'product9 none';
-        gap: 20px;
-        padding: 10px;
+            'side side '
+            'product1 product2 '
+            'product3 product4 '
+            'product5 product6 '
+            'product7 product8 '
+            'product9 none';
+            &__container {
+                &__body{
+                    height: 30%;
+                    h3{
+                        font-size: 20px;
+                    }
+                    p{
+                        font-size: 16px;
+                    }
+                }
+                img{
+                    height: 60%;
+                    padding-bottom: 5px;
+                }
+            }
+    }
+
+    .btn-primary {
+        background-color: #6768ab;
+        border: 0;
+        width: 80px;
+        font-size: 16px;
+        transition: 1s;
+        box-shadow: 2px 2px 2px 1px #191919;
+    
+        &:hover {
+            background-color: #523f90;
+            font-size: 16px;
+        }
     }
 
     .envios {
@@ -214,7 +253,7 @@
             }
 
             img {
-                @include images(100%, 450px, cover, 100%);
+                @include images(100%, 100%, cover, 100%);
             }
         }
     }
